@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksandr Gridnev</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!--contactform script-->
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('Z9V6vnpTgDrBx7b4s');
+      })();
+  </script>
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="https://ss.sport-express.ru/userfiles/materials/196/1969050/full.jpg" alt="maitri" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Maitri Vaghasiya">Aleksandr Gridnev</h1>
+
+          <p class="title">DOTA2 | CISCO | LINUX</p>
+         
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="sa50_a.s.gridnev@mpt.ru" class="contact-link">sa50_a.s.gridnev@mpt.ru</a>
+            </div>
+
+          </li>
+
+         
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="School"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Техникум</p>
+
+              <time datetime="">Московский Приборостроительный Техникум</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Место нахождения</p>
+
+              <address>Москва, Россия</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/gredimt" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Обо мне</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+              Здравствуйте, Я Гриднев Александр,учусь в Московском  Приборостроительном Техникуме.Живу в городе Домодедово.Работаю кассиром в Бристоле.
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Чем Я занимаюсь</h3>
+
+          <ul class="service-list">
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="data:image/jpeg;base64,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" alt="CISCO icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CISCO</h4>
+
+                <p class="service-item-text">
+                  Создаю и настраиваю для работы различные сети.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="LINUX icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">LINUX</h4>
+
+                <p class="service-item-text">
+                  Осваиваю новые операционные системы в большей части LINUX.
+                </p>
+              </div>
+
+            </li>
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="data:image/png;base64,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
+                " alt="MySQL" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">MySQL</h4>
+
+                <p class="service-item-text">
+                 Создаю базы данных для различных целей.
+                </p>
+              </div>
+
+            </li>
+
+
+
+            
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+
+        
+
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Tools and Technologies</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="data:image/png;base64,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" width="300"  height="111" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://timeweb.com/ru/community/article/f0/f0444421e294b9c85f50c2164f2bd27f.jpg "  width="300"  height="111"   alt="client logo">
+              </a>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Резюме</h2>
+        </header>
+
+        <section class="timeline">
+
+
+
+
+             
+
+
+
+
+  
+
+
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Мои скиллы</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">cisco</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">linux</h5>
+                <data value="30">30%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 30%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">HTML, CSS, Javascript</h5>
+                <data value="20">20%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 20%;"></div>
+              </div>
+
+            </li>
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="60">10%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 10%;"></div>
+              </div>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+          </div>
+
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://www.dsctcet.tech/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+
+
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <!-- <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article> -->
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Мои контакты</h2>
+        </header>
+
+  
+
+        <!--emailjs script-->
+        
+    
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Напишите мне</h3>
+
+          <form id="contact-form" class="form" data-form method="post">
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" id="name" class="form-input" placeholder="Full name" autocomplete="off" data-form-input>
+
+              <input type="email" name="email" id="email" class="form-input" placeholder="Email address" autocomplete="off" data-form-input>
+            </div>
+
+            <textarea name="message" id="message" class="form-input" placeholder="Your Message" autocomplete="off" data-form-input></textarea>
+
+            <button class="form-btn" type="button" value="sendForm" onclick="sendMail()" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Пишите если есть вопросики</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
